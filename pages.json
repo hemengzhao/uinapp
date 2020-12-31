@@ -1,0 +1,55 @@
+{
+	
+	"easycom": {
+		// 下载安装的方式需要前面的"@/"，npm安装的方式无需"@/"
+		// 下载安装方式
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+		// npm安装方式
+		// "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [
+		 {
+            "path" : "pages/login/login",
+            "style" : {
+				"navigationBarTitleText": "登陆"
+			}
+        }
+        ,{
+            "path" : "pages/register/register",
+            "style" : {
+				"navigationBarTitleText": "注册"
+			}
+        }
+        ,{
+            "path" : "pages/setPassword/setPassword",
+            "style" : {
+				"navigationBarTitleText": "修改密码"
+			}
+        }, {
+            "path" : "pages/404/404",
+            "style" : {
+				"navigationBarTitleText": "404"
+			}
+        }, {
+            "path" : "pages/home/home",
+            "style" : {
+				"navigationBarTitleText": "活动列表",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 50
+			}
+        }
+        ,{
+            "path" : "pages/details/details",
+            "style" : {
+				"navigationBarTitleText": "活动详情"
+			}
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#FF8A0D",
+		"backgroundColor": "#FFFFFF"
+	}
+	
+}
