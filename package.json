@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.0",
     "uni-simple-router": "^1.5.5",
     "vconsole": "^3.3.4"
   }

@@ -9,6 +9,10 @@ Vue.prototype.$store = store
 import vconsole from 'vconsole' // 引入vconsole
 Vue.prototype.$vconsole = new vconsole()
 
+
+import PrivateUpFileAll from './privateComponents/upFile.vue';
+Vue.component('privateUpFileAll', PrivateUpFileAll)
+
 // 路由
 import router from './router'
 import { RouterMount } from 'uni-simple-router'

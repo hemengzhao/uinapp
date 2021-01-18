@@ -17,7 +17,8 @@ const whiteList = ['/pages/login/login', '/pages/404/404', '/pages/register/regi
 
 //全局路由前置守卫
 router.beforeEach((to, from, next) => {
-	
+	next();
+	return
 		if(whiteList.indexOf(to.path) > -1){
 			next()
 		} else if(store.getters['user/get_token']){

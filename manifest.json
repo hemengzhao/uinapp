@@ -58,7 +58,7 @@
           "port" : 8080,
           "proxy" : {
               "/meetingcloud" : {
-                  "target" : "http://10.10.20.240:9079/",
+                  "target" : "http://hgty.unitsyscloud.com/",
                   // "target" : "http://101.69.231.69:9093/",
                   // "target" : "http://10.10.20.69:88",
                   "changeOrigin" : true,

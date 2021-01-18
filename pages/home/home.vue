@@ -17,10 +17,13 @@
 				</scroll-view>
 			</swiper-item>
 		</swiper>
+		<privateUpFileAll ref="upfile" :captureType='3' :imgFile='false' accept=".doc,.xlsx" @change="fileChange"/>
 	</view>
 </template>
 
 <script>
+	import axios from 'axios';
+	// import UpFileAll from "@/privateComponents/upFile.vue";
 	export default {
 		data() {
 			return {
@@ -36,7 +39,15 @@
 				swiperCurrent: 0,
 			};
 		},
+		components: {
+			// UpFileAll
+		},
+		mounted() {
+			  
+
+		},
 		methods: {
+			
 			change(index) {
 				this.swiperCurrent = index;
 			},
@@ -55,9 +66,17 @@
 			},
 			
 			detailsFn(){
+				console.log('页面滚动到底部的事件',this.$refs.upfile)
+				this.$refs.upfile.triggerClick();
+				
+				return
 				this.$Router.push({
 					path: '/pages/details/details'
 				})
+			},
+			
+			fileChange(e){
+				console.log(e, 'fileChange');
 			}
 		},
 		onPullDownRefresh(){
